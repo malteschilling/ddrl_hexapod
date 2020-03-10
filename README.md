@@ -3,6 +3,7 @@
 ## Setup Conditions
 
 * Tested with `Ubuntu 16.04.6 LTS` and `Docker 19.03.5 build 633a0ea838`
+* All commands are executed in Linux BASH
 * We assume a folder `${HOME}/training` on the host machine which can be mounted into the Docker container.
 * Training on the 0.10 m elevated terrain is preconfigured. We refere to `Hints->Training` if one wants to setup training on another terrain.
 
@@ -15,7 +16,7 @@
     1. `python3 train_dppo2_mlp.py`
 1. Evaluate the training (the scripts do not quit, but print `Done` every two seconds after finishing evaluation)
     1. `cd /tmp/ros2learn/PhantomX-v0/dppo2/*`
-    1. Download the evaluation script: `wget https://gist.githubusercontent.com/tik0/c710013921933de661b2603530a8a7f7/raw/c1e6141478da41507991412f86448f38fc7a4558/run_evaluation_dppo2.py`
+    1. Download the evaluation script: `wget https://raw.githubusercontent.com/malteschilling/ddrl_hexapod/master/evaluation_scripts/run_evaluation_dppo2.py`
     1. Evaluate on flat terrain
         1. `cp /root/ros2learn/environments/gym-gazebo2/gym_gazebo2/worlds/empty_bullet.world /root/ros2learn/environments/gym-gazebo2/gym_gazebo2/worlds/parcour.world`
         1. `python3 run_evaluation_dppo2.py dppo_flat.txt`
@@ -40,8 +41,8 @@
 1. Evaluate the training
     1. `cd /tmp/ros2learn/PhantomX-v0/ppo2/*`
     1. Download the evaluation scripts
-        1. `wget https://gist.githubusercontent.com/tik0/c710013921933de661b2603530a8a7f7/raw/eaa4f12916efd3b3d7bbee0b7986920d5ed9b2dc/evaluate_ppo.sh`
-        1. `wget https://gist.githubusercontent.com/tik0/c710013921933de661b2603530a8a7f7/raw/eaa4f12916efd3b3d7bbee0b7986920d5ed9b2dc/run_evaluation_ppo2.py`
+        1. `wget https://raw.githubusercontent.com/malteschilling/ddrl_hexapod/master/evaluation_scripts/evaluate_ppo.sh`
+        1. `wget https://raw.githubusercontent.com/malteschilling/ddrl_hexapod/master/evaluation_scripts/run_evaluation_ppo2.py`
     1. Evaluate on flat and 0.05 m, 0.10 m, 0.15 m elevated terrain: `/bin/bash evaluate_ppo.sh`
 
 # Hints
