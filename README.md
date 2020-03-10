@@ -5,7 +5,7 @@
 * Tested with `Ubuntu 16.04.6 LTS` and `Docker 19.03.5 build 633a0ea838`
 * All commands are executed in Linux BASH
 * We assume a folder `${HOME}/training` on the host machine which can be mounted into the Docker container.
-* Training on the 0.10 m elevated terrain is preconfigured. We refere to `Hints->Training` if one wants to setup training on another terrain.
+* Training on the 0.10 m elevated terrain is preconfigured. We refer to `Hints->Training` if one wants to setup training on another terrain.
 
 ### Decentralized Approach
 
@@ -48,10 +48,10 @@
 # Hints
 
 *   Docker
-    *   The DDS in ROS2 causes multiple containers to have cross-talk if they are in the same network. Even if they have different IPs, the DDS discovers each others service and causes errors. Therefore, check if every container is connected to its own Docker bridge.
+    *   The DDS in ROS2 causes multiple containers to have crosstalk if they are in the same network. Even if they have different IPs, the DDS discovers each other's service and causes errors. Therefore, check if every container is connected to its own Docker bridge.
     *   To make the training persistent, it is recommended to mount a local folder of the host to `/tmp` inside of the container. Multiple containers may corrupt the training if they mount the same host folder.
-    *   The Docker network ports 8080 (gzserver) and 11345 (tensorboard) are exposed. This can cause crosstalk in ROS2 if multiple container are exposed to the same port. Use e.g. the `-P` switch to assign ports on the host randomly.
-    *   The training has to report the warning `[gzserver-1] [WARN] [lf_tibia.p3d_lf_tibia_controller]: Negative update time difference detected.` periodically as a sign that the simulation is resetted. ROS2 crosstalk may cause the issue, that these warnings do not occur.
+    *   The Docker network ports 8080 (gzserver) and 11345 (tensorboard) are exposed. This can cause crosstalk in ROS2 if multiple containers are exposed to the same port. Use e.g. the `-P` switch to assign ports on the host randomly.
+    *   The training has to report the warning `[gzserver-1] [WARN] [lf_tibia.p3d_lf_tibia_controller]: Negative update time difference detected.` periodically as a sign that the simulation is reset. ROS2 crosstalk may cause the issue, that these warnings do not occur.
 *   Training
     *   Check if the height map `/root/heightmap_7.png` lies inside the `/tmp` folder.
     *   Scripts for training and testing are located inside the Docker folder `/root/ros2learn/experiments/examples/PHANTOMX/`, which are `train_dppo2_mlp.py` (train decentralized approach), `run_dppo2_mlp.py` (test decentralized approach), `train_ppo2_mlp.py` (train centralized approach), `run_ppo2_mlp.py` (test centralized approach), 
