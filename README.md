@@ -1,6 +1,6 @@
 # Decentralized Deep Reinforcement Learning for a six-legged robot
 
-This repository holds results and implementation for training a decentralized control architecture of a six-legged robot. It accompanies a submitted article: Malte Schilling, Kai Konen, Frank W. Ohl, and Timo Korthals, Decentralized Deep Reinforcement Learning for a Distributed and Adaptive Locomotion Controller of a Hexapod Robot. 
+This repository holds results and implementation for training a decentralized control architecture of a six-legged robot. It accompanies a submitted article: Malte Schilling, Kai Konen, Frank W. Ohl, and Timo Korthals, Decentralized Deep Reinforcement Learning for a Distributed and Adaptive Locomotion Controller of a Hexapod Robot. The results have now been updated for 15 seeds for each condition (there is as well a new supplement that covers the fifteen seeds for each condition, named supplement_15.pdf; the original supplement still can be found as file supplement.pdf).
 
 For questions, please contact: Malte Schilling, mschilli@techfak.uni-bielefeld.de
 
@@ -64,6 +64,10 @@ A description how to run training and evaluation by yourself is given below as w
         1. `wget https://raw.githubusercontent.com/malteschilling/ddrl_hexapod/master/evaluation_scripts/run_evaluation_ppo2.py`
     1. Evaluate on flat and 0.05 m, 0.10 m, 0.15 m elevated terrain: `/bin/bash evaluate_ppo.sh`
 
+### Producing Figures
+
+For producing the figures, call the scripts in the visualization_scripts folder.
+
 ### Hints
 
 #### Docker
@@ -79,5 +83,5 @@ A description how to run training and evaluation by yourself is given below as w
 *   Scripts for training and testing are located inside the Docker folder `/root/ros2learn/experiments/examples/PHANTOMX/`, which are `train_dppo2_mlp.py` (train decentralized approach), `run_dppo2_mlp.py` (test decentralized approach), `train_ppo2_mlp.py` (train centralized approach), `run_ppo2_mlp.py` (test centralized approach), 
 *   The training scripts run for 5000 epochs, while a checkpoint is stored every 10 epochs.
 *   tensorboard logs, progress and checkpoints are stored in the Docker folder `/tmp/ros2learn/PhantomX-v0/ppo2` for the centralized approach and `dppo2` for the decentralized approach respectively.
-*   Hyperparameters are configured in `/root/ros2learn/algorithms/baselines/baselines/ppo2/defaults.py` and `/root/ros2learn/algorithms/baselines/baselines/dppo2/defaults.py` respectively.
+*   Hyperparameters are configured in `/root/ros2learn/algorithms/baselines/baselines/ppo2/defaults.py`.
 *   The heightmap used for training is stored in the Docker folder `/root/ros2learn/environments/gym-gazebo2/gym_gazebo2/worlds/parcour.world`. It needs to be overwritten by `heightmap1-0_10m.world` (standard), `heightmap1-0_15m.world`, `heightmap1-0_05m.world`, or `empty_bullet.world` (which is the flat plane) if one wants to perform training on another terrain. These are all as well in `/root/ros2learn/environments/gym-gazebo2/gym_gazebo2/worlds/`.

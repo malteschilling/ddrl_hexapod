@@ -37,7 +37,12 @@ filename_dec = ['Flat_Terrain/decentralized/dppoSeed1Groundplane/DPPOSeed1Ground
 	'Flat_Terrain/decentralized/dppoSeed7Groundplane/DPPOSeed7Groundplane.csv',
 	'Flat_Terrain/decentralized/dppoSeed8Groundplane/DPPOSeed8Groundplane.csv',
 	'Flat_Terrain/decentralized/dppoSeed9Groundplane/DPPOSeed9Groundplane.csv',
-	'Flat_Terrain/decentralized/dppoSeed10Groundplane/DPPOSeed10Groundplane.csv']
+	'Flat_Terrain/decentralized/dppoSeed10Groundplane/DPPOSeed10Groundplane.csv',
+	'Flat_Terrain/decentralized/dppoSeed11Groundplane/DPPOSeed11Groundplane.csv',
+	'Flat_Terrain/decentralized/dppoSeed12Groundplane/DPPOSeed12Groundplane.csv',
+	'Flat_Terrain/decentralized/dppoSeed13Groundplane/DPPOSeed13Groundplane.csv',
+	'Flat_Terrain/decentralized/dppoSeed14Groundplane/DPPOSeed14Groundplane.csv',
+	'Flat_Terrain/decentralized/dppoSeed15Groundplane/DPPOSeed15Groundplane.csv']
 
 filename_centr = ['Flat_Terrain/centralized/ppoSeed1Groundplane/PPOSeed1Groundplane.csv', 
 	'Flat_Terrain/centralized/ppoSeed2Groundplane/PPOSeed2Groundplane.csv',
@@ -48,7 +53,12 @@ filename_centr = ['Flat_Terrain/centralized/ppoSeed1Groundplane/PPOSeed1Groundpl
 	'Flat_Terrain/centralized/ppoSeed7Groundplane/PPOSeed7Groundplane.csv',
 	'Flat_Terrain/centralized/ppoSeed8Groundplane/PPOSeed8Groundplane.csv',
 	'Flat_Terrain/centralized/ppoSeed9Groundplane/PPOSeed9Groundplane.csv',
-	'Flat_Terrain/centralized/ppoSeed10Groundplane/PPOSeed10Groundplane.csv']
+	'Flat_Terrain/centralized/ppoSeed10Groundplane/PPOSeed10Groundplane.csv',
+	'Flat_Terrain/centralized/ppoSeed11Groundplane/PPOSeed11Groundplane.csv',
+	'Flat_Terrain/centralized/ppoSeed12Groundplane/PPOSeed12Groundplane.csv',
+	'Flat_Terrain/centralized/ppoSeed13Groundplane/PPOSeed13Groundplane.csv',
+	'Flat_Terrain/centralized/ppoSeed14Groundplane/PPOSeed14Groundplane.csv',
+	'Flat_Terrain/centralized/ppoSeed15Groundplane/PPOSeed15Groundplane.csv']
 	
 plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['font.sans-serif'] = 'Helvetica'
